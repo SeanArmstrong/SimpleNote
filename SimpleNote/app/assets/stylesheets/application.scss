@@ -1,0 +1,122 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "materialize";
+
+$dark-primary-color: #1976D2;
+$primary-color: #2196F3;
+$light-primary-color: #BBDEFB;
+$text: #FFFFFF;
+$adjacent-color: #4CAF50;
+$primary-text: #212121;
+$secondary-text: #727272;
+$divider-color: #B6B6B6;
+
+body {
+  color: $text;
+}
+nav { 
+  background-color: $dark-primary-color;
+  i {
+    color: $text;
+  }
+}
+
+header {
+  color: $primary-text
+}
+
+main {
+  color: $primary-text
+}
+
+
+.side-nav {
+  padding: 0px;
+}
+
+.user-content {
+  height: 200px;
+  position: relative;
+  background-color: $dark-primary-color;
+
+  .user-settings {
+    float: right;
+  }
+
+  .user-info {
+    width: 50%;
+    margin: 0 auto;
+
+    .profile-picture {
+      padding: 20px;
+      margin: 0 auto;
+    }
+
+    span {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .user-options {
+    ul {
+      padding-top: 20px;
+      list-style: none;
+      align-content: center;
+      width: 50%;
+      margin: 0 auto;
+      
+      li {
+        display: block;
+        i {
+          text-align: center;
+          width: 33%;
+        }
+      }
+    }
+  }
+}
+
+.row {
+  height: 100%
+}
+
+.group-content {
+  height: 100%;
+  background-color: $dark-primary-color;
+
+  ul {
+    float: left;
+    width: 40px;
+  }
+}
+
+.note-content { 
+  height: 100%;
+  background-color: white;
+  color: $primary-text
+}
+
+nav, header, main, footer {
+  padding-left: 240px;
+}
+
+@media only screen and (max-width : 992px) {
+  nav, header, main, footer {
+    padding-left: 0;
+  }
+}

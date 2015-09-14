@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SimpleNote</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div id="slide-out" class="side-nav fixed">
+    <div class="user-content">
+      <i class="user-settings material-icons">more_vert</i>
+      <div class="user-info">
+        <div class="profile-picture">
+          <img class="circle responsive-img" src="http://www.fialaandinvert.com/data/avatars/l/0/158.jpg?1420046094">
+        </div>
+        <span>Sean Armstrong</span>
+      </div>
+      <div class="user-options">
+        <ul>
+          <li><i class="user-settings material-icons">star</i></li>
+          <li><i class="user-settings material-icons">add</i></li>
+          <li><i class="user-settings material-icons">archive</i></li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s2 group-content">
+        <ul>
+          <li><i class="user-settings material-icons">star</i></li>
+          <li><i class="user-settings material-icons">add</i></li>
+          <li><i class="user-settings material-icons">archive</i></li>
+        </ul>
+      </div>
+      <div class="col s10 note-content">Notes</div>
+    </div>
+  </div>
+
+  <nav class="mobile-nav hide-on-large-only">
+    <div>
+      <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </div>
+  </nav>
+
+  <header>
+    This is a header
+  </header>
+  <main>
+    This is some main text
+  </main>
+<%# <%= yield %>
+
+</body>
+</html>
