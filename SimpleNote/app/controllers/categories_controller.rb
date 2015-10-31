@@ -25,6 +25,8 @@ class CategoriesController < ApplicationController
   # POST /categories.json
   def create
     @category = Category.new(category_params)
+    
+    require 'pry'; binding.pry
 
     respond_to do |format|
       if @category.save

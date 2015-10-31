@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   private 
 
   def create_basic_categories
+    Category.create(name: "general", user: self) 
     Category.create(name: "personal", user: self) 
     Category.create(name: "work", user: self) 
   end
