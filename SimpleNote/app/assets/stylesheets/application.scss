@@ -16,8 +16,8 @@
 
 @import "materialize";
 
-$dark-primary-color: #1976D2;
-$primary-color: #2196F3;
+$dark-primary-color: #009688;
+$primary-color: #00796b;
 $light-primary-color: #BBDEFB;
 $text: #FFFFFF;
 $adjacent-color: #4CAF50;
@@ -54,7 +54,7 @@ header {
 .user-content {
   height: 200px;
   position: relative;
-  background-color: $dark-primary-color;
+  background-color: $primary-color;
 
   .user-settings {
     float: right;
@@ -101,6 +101,7 @@ header {
 .group-content {
   height: 100%;
   background-color: $dark-primary-color;
+  overflow-y: scroll;
 
   ul {
     margin: 0;
@@ -110,6 +111,12 @@ header {
       height: 34px;
       text-align: -webkit-center;
       border-top: thin solid white;
+
+      &:hover {
+        cursor: click;
+        background-color: $dark-primary-color;
+        border-right: 3px solid white;
+      }
     }
 
     li:last-child {
@@ -119,7 +126,7 @@ header {
 }
 
 .note-content { 
-  background-color: grey;
+  background-color: #D3D3D3;
   color: $primary-text;
   height: 100%;
   overflow-y: scroll;
@@ -135,22 +142,52 @@ header {
     height: 150px;
     background-color: white;
     overflow: hidden;
+
+    &:hover {
+      border-right: 5px solid $primary-color
+    }
   }
 }
 
 main {
   height: 100%;
   width: 100%;
-  background-color: grey;
   color: $primary-text;
   height: 100%;
   overflow-y: scroll;
 
-  .main-content-container {
-    margin: 3%;
-    height: 94%;
-    border-radius: 3px;
-    padding: 10px;
+  .main-options {
+    width: 100%;
+    height: 30px;
+
+    ul {
+      margin: 0;
+      float: right;
+      padding-right: 5px;
+      li {
+        opacity: 0.05; 
+        margin: 0;
+        display: inline-block;
+        
+        &:hover {
+          .positive {
+            border-bottom: 2px solid #4caf50;
+          }
+          .negative {
+            border-bottom: 2px solid red;
+          }
+          .neutral {
+            border-bottom: 2px solid blue;
+          }
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .main-content-container { 
+    padding: 5px 35px 0 35px;
+    height: calc(100% - 5px);
     background-color: white;
     overflow: hidden;
 

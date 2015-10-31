@@ -116,10 +116,29 @@
   </nav>
 
   <main>
+    <div class="main-options">
+      <ul>
+        <li><i class="neutral material-icons">mode_edit</i></li>
+        <li><i class="positive material-icons">save</i></li>
+        <li><i class="negative material-icons">delete</i></li>
+      </ul>
+    </div>
     <div class="main-content-container">
       <div class="main-content-container-header">
-        <span class="main-content-subject">Card Title</span>
-        <textarea>This is some text about the thing</textarea>
+        <div class="row">
+          <div class="input-field col s9">
+            <input class="main-content-subject" placeholder="Card Title" id="first_name2" type="text">
+          </div>
+          <div class="input-field col s3">
+            <select>
+              <option value="" selected>Category</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+          </div>
+        </div>
+        <textarea class="materialize-textarea" placeholder="Enter Text Here"></textarea>
       </div>
     </div>
   </main>
