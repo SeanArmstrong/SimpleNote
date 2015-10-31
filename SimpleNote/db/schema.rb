@@ -11,9 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150912163837) do
+ActiveRecord::Schema.define(version: 20151031200848) do
 
-  create_table "notes", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.string   "name"
+  end
+
+  add_index "categories", ["user_id"], name: "index_categories_on_user_id"
+
+# Could not dump table "notes" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
+
+  create_table "tags", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
