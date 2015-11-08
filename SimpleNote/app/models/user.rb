@@ -9,6 +9,10 @@ class User < ActiveRecord::Base
 
   after_create :create_basic_categories
 
+  def categories
+    Category.where(user: self)
+  end
+
   private 
 
   def create_basic_categories
