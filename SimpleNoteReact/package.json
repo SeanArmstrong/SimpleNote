@@ -1,0 +1,11 @@
+{
+  "name": "simplenote",
+  "version": "0.0.1",
+  "description": "Simple note taking application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sean Armstrong",
+  "license": "ISC"
+}
